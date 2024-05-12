@@ -26,8 +26,15 @@ func NewProductHandler(s services.IProductService) IProductHandler {
 
 type (
 	ProductRequest struct {
-		Name string `json:"name" validate:"required,min=1,max=30"`
-		SKU  string `json:"sku" validate:"required,min=1,max=30"`
+		Name        string `json:"name" validate:"required,min=1,max=30"`
+		SKU         string `json:"sku" validate:"required,min=1,max=30"`
+		Category    string `json:"category" validate:"required"` // validate=enum?
+		ImageUrl    string `json:"imageUrl" validate:"required"`
+		Notes       string `json:"notes" validate:"required,min=1,max=200"`
+		Price       int64  `json:"price" validate:"required,min=1"`
+		Stock       int32  `json:"stock" validate:"required,min=0,max=100000"`
+		Location    string `json:"location" validate:"required,min=1,max=200"`
+		IsAvailable bool   `json:"isAvailable" validate:"required"`
 	}
 )
 
@@ -49,8 +56,15 @@ func (h *ProductHandler) Store(c echo.Context) (e error) {
 	}
 
 	data, err := h.productService.AddProduct(&services.ProductPayload{
-		Name: r.Name,
-		SKU:  r.SKU,
+		Name:        r.Name,
+		SKU:         r.SKU,
+		Category:    r.Category,
+		ImageUrl:    r.ImageUrl,
+		Notes:       r.Notes,
+		Price:       r.Price,
+		Stock:       r.Stock,
+		Location:    r.Location,
+		IsAvailable: r.IsAvailable,
 	})
 
 	if err != nil {

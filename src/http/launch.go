@@ -36,6 +36,7 @@ func (i *Http) Launch() {
 	})
 
 	v1.MountStaff()
+	v1.MountProduct()
 
 	e.Logger.Fatal(e.Start(":8080"))
 }

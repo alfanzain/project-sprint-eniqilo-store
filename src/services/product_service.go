@@ -3,11 +3,12 @@ package services
 import (
 	"errors"
 
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/entities"
 	"github.com/alfanzain/project-sprint-eniqilo-store/src/repositories"
 )
 
 type IProductService interface {
-	AddProduct(*ProductPayload) (*ProductResult, error)
+	AddProduct(*ProductPayload) (*entities.Product, error)
 }
 
 type ProductService struct {
@@ -26,29 +27,33 @@ var ErrProductNotFound = errors.New("product not found")
 
 type (
 	ProductPayload struct {
-		Name string
-		SKU  string
-	}
-
-	ProductResult struct {
-		ID   string `json:"id"`
-		Name string `json:"name"`
-		SKU  string `json:"sku"`
+		Name        string
+		SKU         string
+		Category    string
+		ImageUrl    string
+		Notes       string
+		Price       int64
+		Stock       int32
+		Location    string
+		IsAvailable bool
 	}
 )
 
-func (s *ProductService) AddProduct(p *ProductPayload) (*ProductResult, error) {
+func (s *ProductService) AddProduct(p *ProductPayload) (*entities.Product, error) {
 	product, err := s.productRepository.Store(&repositories.ProductStorePayload{
-		Name: p.Name,
-		SKU:  p.SKU,
+		Name:        p.Name,
+		SKU:         p.SKU,
+		Category:    p.Category,
+		ImageUrl:    p.ImageUrl,
+		Notes:       p.Notes,
+		Price:       p.Price,
+		Stock:       p.Stock,
+		Location:    p.Location,
+		IsAvailable: p.IsAvailable,
 	})
 	if err != nil {
 		return nil, err
 	}
 
-	return &ProductResult{
-		ID:   product.ID,
-		Name: p.Name,
-		SKU:  p.SKU,
-	}, nil
+	return product, nil
 }

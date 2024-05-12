@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS products (
     location VARCHAR(200),
     is_available BOOLEAN,
     created_at TIMESTAMP DEFAULT NOW(),
-    updated_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP DEFAULT NOW(),
     deleted_at TIMESTAMP NULL
 );
 
