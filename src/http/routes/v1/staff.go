@@ -1,9 +1,9 @@
 package v1
 
 import (
-	"github.com/alfanzain/eniqilo-store/src/http/handlers"
-	"github.com/alfanzain/eniqilo-store/src/repositories"
-	"github.com/alfanzain/eniqilo-store/src/services"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/http/handlers"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/repositories"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/services"
 )
 
 func (i *V1Routes) MountStaff() {

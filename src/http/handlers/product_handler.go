@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/alfanzain/eniqilo-store/src/repositories"
-	"github.com/alfanzain/eniqilo-store/src/services"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/repositories"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/services"
 	"github.com/labstack/echo/v4"
 )
 

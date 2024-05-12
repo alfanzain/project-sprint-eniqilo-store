@@ -8,7 +8,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/alfanzain/eniqilo-store/src/helpers"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/helpers"
 )
 
 type ErrorResponse struct {

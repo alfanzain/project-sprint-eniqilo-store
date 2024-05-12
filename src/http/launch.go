@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/alfanzain/eniqilo-store/src/helpers"
-	v1routes "github.com/alfanzain/eniqilo-store/src/http/routes/v1"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/helpers"
+	v1routes "github.com/alfanzain/project-sprint-eniqilo-store/src/http/routes/v1"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"gopkg.in/go-playground/validator.v9"

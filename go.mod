@@ -1,4 +1,4 @@
-module github.com/alfanzain/eniqilo-store
+module github.com/alfanzain/project-sprint-eniqilo-store
 
 go 1.22.3
 

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/alfanzain/eniqilo-store/src/databases"
-	"github.com/alfanzain/eniqilo-store/src/http"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/databases"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/http"
 	"github.com/joho/godotenv"
 )
 

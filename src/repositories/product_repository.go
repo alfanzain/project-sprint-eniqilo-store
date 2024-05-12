@@ -3,8 +3,8 @@ package repositories
 import (
 	"log"
 
-	"github.com/alfanzain/eniqilo-store/src/databases"
-	"github.com/alfanzain/eniqilo-store/src/entities"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/databases"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/entities"
 
 	"database/sql"
 )

@@ -4,8 +4,8 @@ import (
 	"errors"
 	"os"
 
-	"github.com/alfanzain/eniqilo-store/src/helpers"
-	"github.com/alfanzain/eniqilo-store/src/repositories"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/helpers"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/repositories"
 )
 
 type IStaffService interface {

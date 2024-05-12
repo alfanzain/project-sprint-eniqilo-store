@@ -3,7 +3,7 @@ package services
 import (
 	"errors"
 
-	"github.com/alfanzain/eniqilo-store/src/repositories"
+	"github.com/alfanzain/project-sprint-eniqilo-store/src/repositories"
 )
 
 type IProductService interface {
